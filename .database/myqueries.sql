@@ -16,5 +16,5 @@ INSERT INTO Watchlistitem(Watchlist_item_ID,Watchlist_ID,Anime_ID,Status,Date_Ad
 
 INSERT INTO Anime(Anime_ID,Name,Description,Rating,Episodes,Streaming_Platforms,Author,Release_Year,Genre_ID) VALUES (1000,"One_Piece","Pirates",8.6,1147,"Crunchyroll, Netflix","Eiichiro Oda",1999,1;
 
-INSERT INTO Genre(Genre_ID,Genre_Name) VALUES (1,Adventure)
+INSERT INTO Genre(Genre_ID,Genre_Name) VALUES (1,Adventure);
 
