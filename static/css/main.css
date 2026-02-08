@@ -13,6 +13,7 @@ header {
   margin-right: 200px;
   margin-bottom: 20px;
   background-color: #131313;
+  border: #333 solid;
 }
 main {
   flex: 1; /* Fills remaining space between header and footer */
@@ -90,41 +91,64 @@ ul li a:hover {
   color: #666;
 }
 
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .title {
   font-family: Verdana, Arial;
   color: #ffffff;
 }
 
-.card-size {
+.image-size {
   width: 200px;
-  border-radius: 0 0 5px 5px;
-  border: #252525 solid;
+  height: 300px;
+  border-radius: 5px;
+  display: inline-block;
+  position: relative;
+}
+
+.cardlink {
+  display: block; /* Makes the link a block-level element, so it fills the container */
+  text-decoration: none; /* Removes the default underline from the link */
+  color: inherit; /* Inherits text color from parent, if needed, overriding the default link color */
 }
 
 .card {
   /* Add shadows to create the "card" effect */
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  width: 200px;
   border-radius: 0 5px 5px 5px;
-  margin-left: 10px;
 }
 
 /* On mouse-over, add a deeper shadow */
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+.container:hover {
+  box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.2);
 }
 
 /* Add some padding inside the card container */
 .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   border-radius: 5px 5px 0 0;
   border: #252525 solid;
   padding: 2px 16px;
   background-color: #131313;
   text-align: center;
-  margin-left: 10px;
-  margin-top: 10px;
-  width: 168px;
+  width: 200px;
+  margin: 12px;
+}
+
+.h1 {
+  color: #ffffff;
+  font-size: 20px;
+  font-family: Verdana, Arial;
+}
+.description {
+  color: #ffffff;
+  font-size: x-small;
+  font-family: Verdana, Arial;
 }
 
 .image {
@@ -137,4 +161,57 @@ ul li a:hover {
   margin-top: 10px;
   margin-left: 0;
   margin-bottom: 0;
+}
+
+/* MAL-style layout */
+.mal-layout {
+  width: 830px;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+/* Sidebar */
+.mal-sidebar {
+  background: #1b1f23;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.mal-poster {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.mal-info p {
+  margin: 0.4rem 0;
+  font-size: 0.7rem;
+}
+
+/* Main content */
+.mal-content h1 {
+  margin-top: 0;
+}
+
+.mal-content {
+  background: #111;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: #252525 solid;
+  font-size: 0.8rem;
+}
+
+/* Force white text on anime pages */
+.mal-layout,
+.mal-layout p,
+.mal-layout h1,
+.mal-layout h2,
+.mal-layout h3,
+.mal-layout strong {
+  color: #ffffff;
+  font-family: Verdana, Arial;
 }
